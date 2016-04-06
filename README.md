@@ -1,5 +1,5 @@
 # Into the Further
-a Turn Based Survival Board Game Apocalypse Game
+a Turn Based Survival Apocalypse Game
 
 ![alt tag](http://i.imgur.com/rHhpty1.gif)
 ![alt tag](http://i.imgur.com/zmR23Lr.gif)
@@ -17,11 +17,11 @@ A game created with Unity which uses classic table top game elements such as car
 
 ##Screenshots:
 ---------------
-+ N/A yet!
++ ![alt tag](http://i.imgur.com/H81hFl6.gif)
 
 ##Installation:
 ---------------
-
++ Run the Unity build 
 
 ##Contributors:
 ---------------
