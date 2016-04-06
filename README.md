@@ -17,7 +17,11 @@ A game created with Unity which uses classic table top game elements such as car
 
 ##Screenshots:
 ---------------
-+ ![alt tag](http://i.imgur.com/H81hFl6.gif)
+title screen:<br />
+![alt tag](http://i.imgur.com/H81hFl6.gif)
+
+gameplay mockup:<br />
+![alt tag](http://i.imgur.com/9QEThfv.png)
 
 ##Installation:
 ---------------
