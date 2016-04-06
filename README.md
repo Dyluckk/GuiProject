@@ -1,4 +1,5 @@
-# Turn Based Survival Board Game Apocalypse Game
+# Into the Further
+a Turn Based Survival Board Game Apocalypse Game
 
 ![alt tag](http://i.imgur.com/rHhpty1.gif)
 ![alt tag](http://i.imgur.com/zmR23Lr.gif)
@@ -7,12 +8,12 @@
 
 ##Description:
 ---------------
-A game created with Qt which uses classic table top game elements such as cards, dice, and game pieces. This game follows a party of zombie apocalypse survivors in a turned based survival journey where players must band together to complete a set number of rounds by meeting certain requirements and surviving the round. However, there is a catch. One of the party members may be working against the team. 
+A game created with Unity which uses classic table top game elements such as cards, dice, and game pieces. This game follows a party of zombie apocalypse survivors in a turned based survival journey where players must band together to complete a set number of rounds by meeting certain requirements and surviving the round. However, there is a catch. One of the party members may be working against the team. 
 
 ##Technologies:
 ---------------
-+ Qt
-+ C++
++ Unity
++ C#
 
 ##Screenshots:
 ---------------
@@ -20,9 +21,7 @@ A game created with Qt which uses classic table top game elements such as cards,
 
 ##Installation:
 ---------------
-1. Install Qt 5.6 
-2. Open project 
-3. Clean all, run qmake, build all, run. 
+
 
 ##Contributors:
 ---------------
