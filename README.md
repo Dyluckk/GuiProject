@@ -25,7 +25,15 @@ gameplay mockup:<br />
 
 ##Installation:
 ---------------
-+ Run the Unity build 
++ Run the Unity build (once unity files are available)
+
+##Bugs and TODO List:
+---------------
+N/A
+
+##Contribution Guidelines:
+---------------
+Section under construction
 
 ##Contributors:
 ---------------
@@ -36,3 +44,6 @@ https://github.com/ZacharyWentworth
 ---------------
 This game was inspired by the tabletop game "Dead of Winter" and other hidden traitor table top games.
 
+##License:
+---------------
+MIT
