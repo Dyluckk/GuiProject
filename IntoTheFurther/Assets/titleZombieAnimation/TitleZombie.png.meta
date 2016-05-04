@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 834e0c6809e90c04ba99565d1c00e83d
-timeCreated: 1460612078
+timeCreated: 1461878646
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,45 +59,47 @@ TextureImporter:
         y: 0
         width: 155
         height: 315
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 143, y: -40.5}
-        - {x: 96, y: 157.5}
-        - {x: 6, y: 157.5}
-        - {x: 0, y: 150.5}
-        - {x: 0, y: 37.5}
-        - {x: 9, y: 18.5}
-        - {x: 0, y: -137.5}
-        - {x: 0, y: -157.5}
-        - {x: 103, y: -157.5}
-        - {x: 155, y: -154.5}
-        - {x: 155, y: -145.5}
-        - {x: 138, y: -136.5}
+      - - {x: 65.5, y: -40.5}
+        - {x: 18.5, y: 157.5}
+        - {x: -71.5, y: 157.5}
+        - {x: -77.5, y: 150.5}
+        - {x: -77.5, y: 37.5}
+        - {x: -68.5, y: 18.5}
+        - {x: -77.5, y: -137.5}
+        - {x: -77.5, y: -157.5}
+        - {x: 25.5, y: -157.5}
+        - {x: 77.5, y: -154.5}
+        - {x: 77.5, y: -145.5}
+        - {x: 60.5, y: -136.5}
     - name: TitleZombie_1
       rect:
         serializedVersion: 2
         x: 155
         y: 0
         width: 155
-        height: 308
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 8, y: 154}
-        - {x: 0, y: 134}
-        - {x: 0, y: 64}
-        - {x: 15, y: 17}
-        - {x: 18, y: -59}
-        - {x: 0, y: -132}
-        - {x: 0, y: -154}
-        - {x: 155, y: -154}
-        - {x: 155, y: -143}
-        - {x: 147, y: -129}
-        - {x: 141, y: -44}
-        - {x: 96, y: 154}
+      - - {x: 19.5, y: 143.5}
+        - {x: 10.5, y: 152.5}
+        - {x: -31.5, y: 152.5}
+        - {x: -54.5, y: 148.5}
+        - {x: -77.5, y: 121.5}
+        - {x: -77.5, y: 63.5}
+        - {x: -54.5, y: 14.5}
+        - {x: -77.5, y: -122.5}
+        - {x: -77.5, y: -157.5}
+        - {x: 77.5, y: -157.5}
+        - {x: 77.5, y: -146.5}
+        - {x: 69.5, y: -132.5}
+        - {x: 63.5, y: -47.5}
+        - {x: 35.5, y: 66.5}
     outline: []
   spritePackingTag: 
   userData: 

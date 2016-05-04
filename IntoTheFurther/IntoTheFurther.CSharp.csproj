@@ -63,7 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraPos.cs" />
+    <Compile Include="Assets\EnemyCollision.cs" />
+    <Compile Include="Assets\EnemySpawner.cs" />
+    <Compile Include="Assets\PlayerControl.cs" />
+    <Compile Include="Assets\Position.cs" />
     <Compile Include="Assets\TitleScreen.cs" />
+    <Compile Include="Assets\baracadeBehavior.cs" />
+    <Compile Include="Assets\basicZombieMovement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

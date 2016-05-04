@@ -60,8 +60,12 @@ public class TitleScreen : MonoBehaviour {
             cameraAnim.Update(20);
             menuIsUp = true;
             print("Time Complete");
-        }
-                       
+        }                   
+            
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            TitleZombie.GetComponent<Animator>().Play("brownchange");
+        }                       
     }
 
     public void AboutClicked() {
