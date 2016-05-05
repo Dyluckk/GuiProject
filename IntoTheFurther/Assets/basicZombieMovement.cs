@@ -7,18 +7,20 @@ public class basicZombieMovement : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        //if the zombie is hit with a bullet
+        if (other.CompareTag("bullet"))
+        {
+            Debug.Log("bullet detected");
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
         //if the zombie reaches the barricade
-        if (other.CompareTag("barricade"))
+        else if (other.CompareTag("barricade"))
         {
             Debug.Log("collision detected");
             speed = 0;
         }
-        //if the zombie is hit with a bullet
-        else if (other.CompareTag("bullet"))
-        {
-            Debug.Log("bullet detected");
-            Destroy(gameObject);
-        }
+        
 
     }
     // Use this for initialization

@@ -14,6 +14,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class TitleScreen : MonoBehaviour {
 
@@ -22,6 +23,7 @@ public class TitleScreen : MonoBehaviour {
     public Text title;
     public Button startButton;
     public Button aboutButton;
+
 
     public Text aboutText;
     public Text startText;
@@ -97,29 +99,31 @@ public class TitleScreen : MonoBehaviour {
     }
 
     public void StartClicked() {
-        //buttons dissapear
-        startButton.GetComponent<CanvasGroup>().alpha = 0;
-        aboutButton.GetComponent<CanvasGroup>().alpha = 0;
 
-        Vector3 pos = TitleZombie.transform.position;
-        Vector3 oldPos = TitleZombie.transform.position;
-        oldPos.x = 749;
-        pos.x = 1000;
+        SceneManager.LoadScene("MainGame");
+        ////buttons dissapear
+        //startButton.GetComponent<CanvasGroup>().alpha = 0;
+        //aboutButton.GetComponent<CanvasGroup>().alpha = 0;
 
-        TitleZombie.transform.position = pos;
+        //Vector3 pos = TitleZombie.transform.position;
+        //Vector3 oldPos = TitleZombie.transform.position;
+        //oldPos.x = 749;
+        //pos.x = 1000;
 
-        //text is displayed
-        aboutText.text = "Coming Soon...\n\n" +
-                         "PRESS \"Space\" TO RETURN TO THE MAIN MENU";
+        //TitleZombie.transform.position = pos;
 
-        //if space is pressed re-enable buttons, sprites and remove about text
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            aboutText.text = "";
-            startButton.GetComponent<CanvasGroup>().alpha = 1;
-            aboutButton.GetComponent<CanvasGroup>().alpha = 1;
-            TitleZombie.transform.position = oldPos;
-        }
+        ////text is displayed
+        //aboutText.text = "Coming Soon...\n\n" +
+        //                 "PRESS \"Space\" TO RETURN TO THE MAIN MENU";
+
+        ////if space is pressed re-enable buttons, sprites and remove about text
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    aboutText.text = "";
+        //    startButton.GetComponent<CanvasGroup>().alpha = 1;
+        //    aboutButton.GetComponent<CanvasGroup>().alpha = 1;
+        //    TitleZombie.transform.position = oldPos;
+        //}
     }
 
 }
