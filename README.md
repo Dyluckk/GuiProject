@@ -2,7 +2,7 @@
 a shooter defense strategy game
 
 ![alt tag](http://i.imgur.com/rHhpty1.gif)
-
+![alt tag](http://i.imgur.com/zmR23Lr.gif)
 
 ######Icon by: oOLuccianaOo
 
@@ -19,9 +19,6 @@ A game created with Unity, which uses classic shooter defender mechanics as well
 ---------------
 title screen:<br />
 ![alt tag](http://i.imgur.com/H81hFl6.gif)
-
-gameplay mockup:<br />
-![alt tag](http://i.imgur.com/9QEThfv.png)
 
 ##Installation:
 ---------------
