@@ -26,7 +26,10 @@ title screen:<br />
 
 ##Bugs and TODO List:
 ---------------
-N/A
+- add dice rolling mechanism
+- set up round win conditions
+- make stages
+- add some game sprite pixel art ( if time :\ )
 
 ##Contribution Guidelines:
 ---------------
