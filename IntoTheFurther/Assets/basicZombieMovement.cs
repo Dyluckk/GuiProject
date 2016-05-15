@@ -13,7 +13,7 @@ public class basicZombieMovement : MonoBehaviour {
             Debug.Log("bullet detected");
             Destroy(gameObject);
             Destroy(other.gameObject);
-        }
+        } 
         //if the zombie reaches the barricade
         else if (other.CompareTag("barricade"))
         {
