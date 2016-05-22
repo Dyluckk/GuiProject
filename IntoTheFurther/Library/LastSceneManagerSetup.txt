@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MenuScene.unity
+- path: Assets/scenes/ColonyScene.unity
   isLoaded: 1
   isActive: 1
