@@ -3,23 +3,24 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class TheColony : MonoBehaviour {
-
-    int numFuel;
-    int numFood;
-    int numWater;
-    int numSurvivors;
-    int numDaysLeft;
-    
+       
     public Text StatsPrompt;
     public Text StatsHUD;
     public Text DicePrompt;
+
+    public GameObject gameStats;
+
+    public GameObject DicePanel;
 
     bool onStatsPrompt;
 
 	// Use this for initialization
 	void Start () {
+        //make sure running totals stays intact
+        DontDestroyOnLoad(gameStats);
         promptStats();
-	}
+        DicePanel.GetComponent<CanvasGroup>().alpha = 0;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -43,11 +44,15 @@ public class TheColony : MonoBehaviour {
         StatsPrompt.GetComponent<CanvasGroup>().alpha = 1;
 
         StatsPrompt.text = ("Current Stats:" +
-                             "\n\n\tSurvivors - " + numSurvivors +
-                             "\n\tFuel - " + numFuel +
-                             "\n\tFood - " + numFood +
-                             "\n\tWater - " + numWater +
-                             "\n\tDays Left - " + numDaysLeft +
+                             "\n\n\tSurvivors - " + gameStats.GetComponent<ScenerioAttributes>().numSurvivors +
+                             " of " + gameStats.GetComponent<ScenerioAttributes>().neededSurvivors +
+                             "\n\tFuel - " + gameStats.GetComponent<ScenerioAttributes>().numFuel +
+                             " of " + gameStats.GetComponent<ScenerioAttributes>().neededFuel +
+                             "\n\tFood - " + gameStats.GetComponent<ScenerioAttributes>().numFood +
+                             " of " + gameStats.GetComponent<ScenerioAttributes>().neededFood +
+                             "\n\tWater - " + gameStats.GetComponent<ScenerioAttributes>().numWater +
+                             " of " + gameStats.GetComponent<ScenerioAttributes>().neededWater +
+                             "\n\tDays Left - " + gameStats.GetComponent<ScenerioAttributes>().numDaysLeft +
                              "\n\n Press Space to Continue");    
 
     }
@@ -56,16 +61,21 @@ public class TheColony : MonoBehaviour {
     {
         StatsHUD.GetComponent<CanvasGroup>().alpha = 1;
         StatsHUD.text = ("Current Stats:" +
-                             "\n\n\tSurvivors - " + numSurvivors +
-                             "\n\tFuel - " + numFuel +
-                             "\n\tFood - " + numFood +
-                             "\n\tWater - " + numWater +
-                             "\n\tDays Left - " + numDaysLeft);
+                             "\n\n\tSurvivors - " + gameStats.GetComponent<ScenerioAttributes>().numSurvivors +
+                             " of " + gameStats.GetComponent<ScenerioAttributes>().neededSurvivors +
+                             "\n\tFuel - " + gameStats.GetComponent<ScenerioAttributes>().numFuel +
+                             " of " + gameStats.GetComponent<ScenerioAttributes>().neededFuel +
+                             "\n\tFood - " + gameStats.GetComponent<ScenerioAttributes>().numFood +
+                             " of " + gameStats.GetComponent<ScenerioAttributes>().neededFood +
+                             "\n\tWater - " + gameStats.GetComponent<ScenerioAttributes>().numWater +
+                             " of " + gameStats.GetComponent<ScenerioAttributes>().neededWater +
+                             "\n\tDays Left - " + gameStats.GetComponent<ScenerioAttributes>().numDaysLeft);                             
     }
 
     void RollDicePrompt()
     {
-
+        DicePanel.GetComponent<CanvasGroup>().alpha = 1;
+        DicePanel.GetComponent<DicePlayMechanics>().SpawnDice();
     }
 
 }

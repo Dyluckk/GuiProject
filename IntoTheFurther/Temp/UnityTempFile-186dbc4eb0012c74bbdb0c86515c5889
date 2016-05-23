@@ -80,11 +80,13 @@
 Assets/scripts/BulletBehavior.cs
 Assets/scripts/CameraPos.cs
 Assets/scripts/DiceOnClick.cs
+Assets/scripts/DicePlayMechanics.cs
 Assets/scripts/EnemySpawner.cs
 Assets/scripts/GamePreferences.cs
 Assets/scripts/GlobalOptions.cs
 Assets/scripts/PlayerControl.cs
 Assets/scripts/Position.cs
+Assets/scripts/ScenerioAttributes.cs
 Assets/scripts/TheColony.cs
 Assets/scripts/TitleScreen.cs
 Assets/scripts/baracadeBehavior.cs

@@ -7,8 +7,7 @@ public class baracadeBehavior : MonoBehaviour {
 
     public int baracadeHealth;
     public Text healthText;
-
-
+    
     // Use this for initialization
     void Start () {
         baracadeHealth = 100;        
