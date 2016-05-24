@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TheWall : MonoBehaviour {
-
+public class TheWall : MonoBehaviour
+{
     public Camera cam;
     public GameObject GlobalOptions;
     public AudioSource[] BGM;

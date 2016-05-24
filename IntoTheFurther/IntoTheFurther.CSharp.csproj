@@ -66,14 +66,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scenes\Colony\scripts\DiceOnClick.cs" />
-    <Compile Include="Assets\scenes\Colony\scripts\DicePlayMechanics.cs" />
+    <Compile Include="Assets\scenes\Colony\scripts\PoliceStation.cs" />
     <Compile Include="Assets\scenes\Colony\scripts\TheColony.cs" />
-    <Compile Include="Assets\scenes\Colony\scripts\diceSpawner.cs" />
-    <Compile Include="Assets\scenes\Menu\scripts\GamePreferences.cs" />
     <Compile Include="Assets\scenes\Menu\scripts\GlobalOptions.cs" />
-    <Compile Include="Assets\scenes\Menu\scripts\TitleScreen.cs" />
-    <Compile Include="Assets\scenes\ScenerioSelector\scripts\ScenerioAttributes.cs" />
-    <Compile Include="Assets\scenes\ScenerioSelector\scripts\ScenerioStartScreen.cs" />
+    <Compile Include="Assets\scenes\Menu\scripts\Menu.cs" />
+    <Compile Include="Assets\scripts\GameStats.cs" />
+    <Compile Include="Assets\scenes\ScenerioSelector\scripts\ScenerioSelect.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\BulletBehavior.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\EnemySpawner.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\PlayerControl.cs" />

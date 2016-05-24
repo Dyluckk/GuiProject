@@ -2,44 +2,74 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class DiceOnClick : MonoBehaviour {
-
-    const int supplies = 3;
+public class DiceOnClick : MonoBehaviour
+{
+    const int search = 3;
     const int buffOrDebuff = 2;
     const int survivor = 1;
-
-    bool hasRolled;
     bool isRolling;
+    public int numRollsLeft;
+    int roll;
+    public bool RollComplete;
 
     public GameObject gameStats;
-    public GameObject outcomeText;
+   
+    public GameObject TheColonyController;
+
+    public Text rollsLeftText;
+    public Text outcomeText;
+
+    public Button outcomeBtn;   
+
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         gameStats = GameObject.Find("currentGameStats");
-        outcomeText = GameObject.Find("outcomeText");
-        outcomeText.GetComponent<Text>().text = "";
-        hasRolled = false;
-     
+        TheColonyController = GameObject.Find("Main Camera");
+
+        outcomeText.text = "";
+        numRollsLeft = gameStats.GetComponent<GameStats>().numSurvivors;
+        outcomeBtn.GetComponent<CanvasGroup>().alpha = 0;
+        outcomeBtn.GetComponent<Button>().interactable = false;
+        RollComplete = false;
+        rollsLeftText.text = "Rolls Left: " + numRollsLeft; 
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(numRollsLeft == 0 && (outcomeBtn.GetComponent<Button>().interactable != true))
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+           
+            rollsLeftText.GetComponent<CanvasGroup>().alpha = 0;
+        }
+
+        if (numRollsLeft > 0)
+        {
+            RollComplete = false;
+        }
+    }
 
     public void OnMouseDown()
     {
-        if (!hasRolled && !isRolling)
+        if (!isRolling && (numRollsLeft > 0))
         {
             isRolling = true;
             gameObject.GetComponent<Animator>().Play("DiceRoll");
             Debug.Log("is rolling");
+            //decrement rolls
+            
         }
         else if (isRolling)
         {
-            hasRolled = true;
-            int roll = 0;
+            outcomeBtn.GetComponent<Button>().interactable = true;
+            numRollsLeft--;
+            roll = 0;
+
+            gameObject.GetComponent<AudioSource>().Play();
+
             int rnd = Random.Range(0, 100);   // creates a number between 0 and 100
             isRolling = false;
 
@@ -47,54 +77,63 @@ public class DiceOnClick : MonoBehaviour {
             if (rnd <= 10)
             {
                 roll = survivor;
-                gameStats.GetComponent<ScenerioAttributes>().numSurvivors += 1;
+                gameStats.GetComponent<GameStats>().numSurvivors += 1;
                 gameObject.GetComponent<Animator>().Play("RollOne");
                 Debug.Log("rolled a 1");
-                outcomeText.GetComponent<Text>().text = "Survivor was found!";
+                outcomeText.text = "Survivor was found!";
+                outcomeBtn.GetComponent<CanvasGroup>().alpha = 1;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
             //30% chance to roll a buff or debuff
             else if (rnd > 10 && rnd <= 40)
             {
                 roll = buffOrDebuff;
                 gameObject.GetComponent<Animator>().Play("RollTwo");
-                outcomeText.GetComponent<Text>().text = "ARGH ZOMBIES!";
+                outcomeText.text = "ARGH ZOMBIES!";
                 Debug.Log("rolled a 2");
+                outcomeBtn.GetComponent<CanvasGroup>().alpha = 1;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
             //60% chance to roll supplies
             else if (rnd > 40 && rnd <= 100)
             {
                 gameObject.GetComponent<Animator>().Play("RollThree");
-                addSupplies();
-                roll = supplies;
+                outcomeText.text = "SEARCH!!!";
+                roll = search;
                 Debug.Log("rolled a 3");
+                outcomeBtn.GetComponent<CanvasGroup>().alpha = 1;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
-
         }
     }
 
-    void addSupplies()
+    public void outcomeBtnOnClick()
     {
-        //decide what supply is generated
-        int rnd = Random.Range(1, 3);   // creates a number between 0 and 100
 
-        if (rnd == 3)
+        if (roll == search)
         {
-            //increase food
-            gameStats.GetComponent<ScenerioAttributes>().numFood += 1;
-            outcomeText.GetComponent<Text>().text = "searched, and found food!";
+            //go to search
+            TheColonyController.GetComponent<TheColony>().DisplaySearch();
         }
-        else if (rnd == 2)
+        else if (roll == buffOrDebuff)
         {
-            //increase fuel
-            gameStats.GetComponent<ScenerioAttributes>().numFuel += 1;
-            outcomeText.GetComponent<Text>().text = "searched, and found fuel!";
+            //something will happen here regarding buffs and debuffs
+            RollComplete = true;
         }
-        else if (rnd == 1)
+        else if (roll == survivor)
         {
-            //increase water
-            gameStats.GetComponent<ScenerioAttributes>().numWater += 1;
-            outcomeText.GetComponent<Text>().text = "searched, and found water!";
+            RollComplete = true;
+            //something with survivors will happen
         }
+
+        rollsLeftText.text = "Rolls Left: " + numRollsLeft;
+
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+        outcomeBtn.GetComponent<CanvasGroup>().alpha = 0;
+        outcomeBtn.GetComponent<Button>().interactable = false;
+
+        outcomeText.text = "";       
     }
-     
+
 }

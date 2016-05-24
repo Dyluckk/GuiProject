@@ -4,15 +4,7 @@ using System.Collections;
 
 public class GlobalOptions : MonoBehaviour
 {
-
     public float volume;
-
-    //make sure volume is set when the new scene is loaded
-    //void OnLevelWasLoaded()
-    //{
-    //    AudioListener.volume = PlayerPrefs.GetFloat("volume");
-    //    DontDestroyOnLoad(gameObject);
-    //}
 
     void Start()
     {
