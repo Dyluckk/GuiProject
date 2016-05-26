@@ -43,7 +43,7 @@ public class TheColony : MonoBehaviour
         //set audio
         GlobalOptions = GameObject.Find("GlobalOptions");
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
-        //BGM[0].volume = GlobalOptions.GetComponent<GlobalOptions>().volume;
+        BGM[0].volume = GlobalOptions.GetComponent<GlobalOptions>().volume;
         //SFX[0].volume = GlobalOptions.GetComponent<GlobalOptions>().volume;
         promptStats();
         DicePanel.GetComponent<CanvasGroup>().alpha = 0;

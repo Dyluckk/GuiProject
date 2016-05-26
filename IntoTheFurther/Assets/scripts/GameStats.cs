@@ -15,7 +15,9 @@ public class GameStats : MonoBehaviour{
     public int numDaysLeft;
     public int moral;
 
+    public int currentDay;
     public int pistolAmmo;
+    public int numZombies;
 
     //list of buffs and debuffs
     void OnDrawGizmos()
@@ -37,6 +39,10 @@ public class GameStats : MonoBehaviour{
         numDaysLeft = 40;
 
         moral = 100;
+        pistolAmmo = 100;
+
+        numZombies = 30;
+        currentDay = 1;
 
     }
     

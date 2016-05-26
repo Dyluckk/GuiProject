@@ -70,6 +70,7 @@
     <Compile Include="Assets\scenes\Colony\scripts\TheColony.cs" />
     <Compile Include="Assets\scenes\Menu\scripts\GlobalOptions.cs" />
     <Compile Include="Assets\scenes\Menu\scripts\Menu.cs" />
+    <Compile Include="Assets\scenes\TheWall\scripts\Pistol.cs" />
     <Compile Include="Assets\scripts\GameStats.cs" />
     <Compile Include="Assets\scenes\ScenerioSelector\scripts\ScenerioSelect.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\BulletBehavior.cs" />
