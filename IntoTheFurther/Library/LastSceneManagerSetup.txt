@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/TheWall/TheWallScene.unity
+- path: Assets/scenes/Menu/MenuScene.unity
   isLoaded: 1
   isActive: 1

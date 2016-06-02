@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.3.4f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -65,21 +63,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scenes\Colony\scripts\Clinic.cs" />
+    <Compile Include="Assets\scenes\Colony\scripts\DeptStore.cs" />
     <Compile Include="Assets\scenes\Colony\scripts\DiceOnClick.cs" />
+    <Compile Include="Assets\scenes\Colony\scripts\GunStore.cs" />
+    <Compile Include="Assets\scenes\Colony\scripts\Hospital.cs" />
     <Compile Include="Assets\scenes\Colony\scripts\PoliceStation.cs" />
+    <Compile Include="Assets\scenes\Colony\scripts\School.cs" />
+    <Compile Include="Assets\scenes\Colony\scripts\StorageFacility.cs" />
     <Compile Include="Assets\scenes\Colony\scripts\TheColony.cs" />
     <Compile Include="Assets\scenes\Menu\scripts\GlobalOptions.cs" />
     <Compile Include="Assets\scenes\Menu\scripts\Menu.cs" />
-    <Compile Include="Assets\scenes\TheWall\scripts\Pistol.cs" />
-    <Compile Include="Assets\scripts\GameStats.cs" />
     <Compile Include="Assets\scenes\ScenerioSelector\scripts\ScenerioSelect.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\BulletBehavior.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\scenes\TheWall\scripts\Pistol.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\PlayerControl.cs" />
+    <Compile Include="Assets\scenes\TheWall\scripts\TheWall.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\baracadeBehavior.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\basicZombie.cs" />
     <Compile Include="Assets\scenes\TheWall\scripts\bulletSpawner.cs" />
-    <Compile Include="Assets\scenes\TheWall\scripts\TheWall.cs" />
+    <Compile Include="Assets\scripts\GameStats.cs" />
     <Compile Include="Assets\scripts\Position.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

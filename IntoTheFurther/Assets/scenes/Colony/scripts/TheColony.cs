@@ -12,6 +12,7 @@ public class TheColony : MonoBehaviour
     public Text StatsHUD;
     public Text DicePrompt;
     public Text SearchText;
+    public Text MoralText;
 
     public Button returnBtn;
     public Button toWallBtn;
@@ -34,10 +35,14 @@ public class TheColony : MonoBehaviour
     public AudioSource[] BGM;
     public AudioSource[] SFX;
 
+   
+
     // Use this for initialization
     void Start()
     {
         gameStats = GameObject.Find("currentGameStats");
+
+        
 
         diceExist = false;
         //set audio
@@ -58,7 +63,8 @@ public class TheColony : MonoBehaviour
 
         toWallBtn.GetComponent<CanvasGroup>().alpha = 0;
         toWallBtn.GetComponent<Button>().interactable = false;
-
+        gameStats.GetComponent<GameStats>().numZombies = 20;
+        gameStats.GetComponent<GameStats>().numZombies *= gameStats.GetComponent<GameStats>().currentDay;
     }
 
     // Update is called once per frame
@@ -80,6 +86,8 @@ public class TheColony : MonoBehaviour
             toWallBtn.GetComponent<Button>().interactable = true;
         }
 
+        //update num Moral  
+        MoralText.text = "Moral: " + gameStats.GetComponent<GameStats>().moral;
     }
 
     void promptStats()
@@ -153,7 +161,7 @@ public class TheColony : MonoBehaviour
         StorageFacility.GetComponent<SpriteRenderer>().enabled = true;
 
         SearchPanel.GetComponent<CanvasGroup>().alpha = 1;
-
+        SearchPanel.transform.SetAsLastSibling();
         //Hide others
         StatsHUD.GetComponent<CanvasGroup>().alpha = 0;
         DicePanel.GetComponent<CanvasGroup>().alpha = 0;

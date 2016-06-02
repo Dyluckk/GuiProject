@@ -7,20 +7,30 @@ public class basicZombie : MonoBehaviour {
     public float AttackSpeedTimer = 1f;
     public int damage = 1;
     public GameObject Barricade;
+    //public GameObject BloodSplatter;
+    //public Animator BloodSplatterAnimator;
+    public GameObject gameStats;
     bool isAttacking;
-  
+    int health;
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
         //if the zombie is hit with a bullet
         if (other.CompareTag("bullet"))
         {
-            Debug.Log("bullet detected");
-            Destroy(gameObject);
+           // GameObject blood = Instantiate(BloodSplatter, other.gameObject.transform.position, Quaternion.identity) as GameObject;
+            health--;
             Destroy(other.gameObject);
+            Debug.Log("bullet hit zombie");
+
+            //if (!(blood.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("bloodAnim")))
+            //    {
+            //        Destroy(blood);
+            //    }
         } 
         //if the zombie reaches the barricade
-        else if (other.CompareTag("barricade"))
+        if (other.CompareTag("barricade"))
         {
             //if collision with barricade
             Debug.Log("collision detected");
@@ -34,6 +44,8 @@ public class basicZombie : MonoBehaviour {
     void Start () {
         isAttacking = false;
         Barricade = GameObject.Find("Barricade");
+        gameStats = GameObject.Find("currentGameStats");
+        health = 2;
     }
 	
 	// Update is called once per frame
@@ -53,6 +65,12 @@ public class basicZombie : MonoBehaviour {
             Barricade.GetComponent<baracadeBehavior>().zombieDamage(damage);
             Debug.Log("zombie attack");
             AttackSpeedTimer = 1f;
+        }
+
+        if (health == 0)
+        {
+            gameStats.GetComponent<GameStats>().numZombies--;
+            Destroy(gameObject);
         }
 
     }

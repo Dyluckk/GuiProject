@@ -7,19 +7,32 @@ public class baracadeBehavior : MonoBehaviour {
 
     public int baracadeHealth;
     public Text healthText;
-    
+    public GameObject gameStats;
+
     // Use this for initialization
     void Start () {
-        baracadeHealth = 100;        
+        gameStats = GameObject.Find("currentGameStats");
+        //baracdehealth + meds
+        baracadeHealth = gameStats.GetComponent<GameStats>().barricadeHealth +
+                         gameStats.GetComponent<GameStats>().numMedicine;        
     }
 	
 	// Update is called once per frame
 	void Update () {
         healthText.text = "Barricade Health: " + baracadeHealth;
 
+        //if you lose the barricade
         if(baracadeHealth <= 0)
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("ColonyScene");
+            gameStats.GetComponent<GameStats>().moral -= 25;
+            gameStats.GetComponent<GameStats>().currentDay++;
+            gameStats.GetComponent<GameStats>().numDaysLeft--;
+
+            if (gameStats.GetComponent<GameStats>().numSurvivors > 1)
+            {
+                gameStats.GetComponent<GameStats>().numSurvivors--;
+            }
         }
 
 	}

@@ -57,7 +57,7 @@ public class DiceOnClick : MonoBehaviour
         if (!isRolling && (numRollsLeft > 0))
         {
             isRolling = true;
-            gameObject.GetComponent<Animator>().Play("DiceRoll");
+            gameObject.GetComponent<Animator>().Play("RollDice");
             Debug.Log("is rolling");
             //decrement rolls
             

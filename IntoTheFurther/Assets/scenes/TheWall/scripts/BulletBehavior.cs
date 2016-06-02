@@ -10,5 +10,6 @@ public class BulletBehavior : MonoBehaviour {
             Debug.Log("bullet destroyed");
             Destroy(gameObject);
         }
+
     }
 }

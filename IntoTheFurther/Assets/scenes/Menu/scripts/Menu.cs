@@ -83,7 +83,7 @@ public class Menu : MonoBehaviour
         }
 
         //once the timer has ran out make title and menu buttons available
-        if ((_timeLeft < 0 || Input.GetKeyDown(KeyCode.Space)) && (menuIsUp == false))
+        if ((_timeLeft < 0 || Input.anyKey) && (menuIsUp == false))
         {
             title.GetComponent<CanvasGroup>().alpha = 1;
             startButton.GetComponent<CanvasGroup>().alpha = 1;

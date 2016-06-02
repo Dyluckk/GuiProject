@@ -15,7 +15,7 @@ public class PoliceStation : MonoBehaviour
     public GameObject UIBlocker;
     public GameObject returnButton;
   
-    bool thinking;
+    //bool thinking;
 
     void Start()
     {
@@ -55,7 +55,7 @@ public class PoliceStation : MonoBehaviour
         hourGlass.GetComponent<SpriteRenderer>().enabled = true;
 
         StartCoroutine(DecideOutcome());
-        UIBlocker.GetComponent<BoxCollider2D>().enabled = true;
+        UIBlocker.GetComponent<BoxCollider2D>().enabled = true;      
 
     }
 
@@ -64,7 +64,7 @@ public class PoliceStation : MonoBehaviour
         int rndSearch = Random.Range(0, 100);
         int rndRisk = Random.Range(0, 100);
 
-        float timer = 3.0f;
+        float timer = 2.0f;
         hourGlass.GetComponent<Animator>().Play("hourglassAnim");
 
         while (timer > 0.0f)
@@ -95,7 +95,6 @@ public class PoliceStation : MonoBehaviour
 
                 OutcomeText.text = "Search Successful:\n" +
                                    "\n\nFound " + rndAmmo + " Pistol Ammo";
-
 
             }
             else if (rndSearch <= 90)
