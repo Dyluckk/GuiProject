@@ -4,44 +4,39 @@ a shooter defense strategy game
 ![alt tag](http://i.imgur.com/rHhpty1.gif)
 ![alt tag](http://i.imgur.com/zmR23Lr.gif)
 
-######Icon by: oOLuccianaOo
+Icon by: oOLuccianaOo
 
-##Description:
+#Description:
 ---------------
 A game created with Unity, which uses classic shooter defender mechanics as well as some strategy and chance involved. This game follows a party of zombie apocalypse survivors who are working to protect their compound. There is a requirement of Gas, Food, and other necessities to survive the round. After each protection stage, the player will roll dice to see if any supplies were found and if any colony members have been lost.
 
-##Technologies:
+#Technologies:
 ---------------
 + Unity
 + C#
 
-##Screenshots:
+#Screenshots:
 ---------------
 title screen:<br />
 ![alt tag](http://i.imgur.com/H81hFl6.gif)
 
-##Installation:
+#Installation:
 ---------------
 + Run the Unity build (once unity files are available)
 
-##Bugs and TODO List:
+#Bugs and TODO List:
 ---------------
 - set up round win conditions
 - add some game sprite pixel art ( if time :\ )
 
-##Contribution Guidelines:
+#Contribution Guidelines:
 ---------------
 Section under construction
 
-##Contributors:
----------------
-Zachary Wentworth<br />
-https://github.com/ZacharyWentworth
-
-##Inspiration:
+#Inspiration:
 ---------------
 This game was inspired by the tabletop game "Dead of Winter" and classic arcade games such as Galaga.
 
-##License:
+#License:
 ---------------
 MIT
